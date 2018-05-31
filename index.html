@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>播放器</title>
+		<link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body>
+		<audio id="player" src="audio/亲爱的.mp3"></audio>
+		<div id="bz_music" class="bz_music">
+			<div class="music_info">
+				<div class="left_photo">
+					<a href="javascript:;">
+						<img id="left_photo" src="img/qinaide.jpg" alt="" />
+					</a>
+				</div>
+				<div class="center_list">
+					<ul>
+						<li class="list_current">
+							<a href="javascript:;">
+								<span id="list_title" class="list_title">亲爱的</span>
+							</a>
+							<a href="javascript:;">
+								<span id="list_singer" class="list_singer">潘玮柏</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="right_btn">
+					<a id="btn_random" href="javascript:;">
+						<span class="random fa fa-random"></span>
+					</a>
+					<a id="btn_list" href="javascript:;" onClick="showMusicList()" data-flag="1">
+						<span id="showHide" class="list fa fa-list"></span>
+					</a>
+					<a id="btn_heart" href="javascript:;">
+						<span class="heart fa fa-heart"></span>
+					</a>
+
+				</div>
+				<div id="process" class="process">
+					<span id="process_slide" class="process_slide"></span>
+				</div>
+			</div>
+			<div class="music_controls">
+				<div id="time" class="time">00:00</div>
+				<div class="play_controls">
+					<a id="btnBackward" href="javascript:;" class="btn_back fa fa-backward" onClick="backword()"></a>
+					<a id="btnPlay" href="javascript:;" class="btn_play fa fa-play"></a>
+					<a id="btnForward" href="javascript:;" class="btn_forward fa fa-forward" onClick="forward()"></a>
+				</div>
+				<a id="volumeOff" class="volumeOff fa fa-volume-off" href="javascript:;" onClick="volumeOff()"></a>
+				<div id="volume" class="volume">
+					<span id="volume_slide" class="btn_slide"></span>
+				</div>
+				<a id="volumeUp" class="volumeUp fa fa-volume-up" href="javascript:;" onClick="volumeUp()"></a>
+			</div>
+			<div id="play_list_area" class="play_list_area">
+				<ul id="play_list" class="play_list">
+					<!--动态创建-->
+					<!--<li class="current"><span class="list_title">十年</span><span class="list_time">00：00</span></li>
+					<li><span class="list_title">动物世界</span><span class="list_time">00：00</span></li>					-->
+				</ul>
+			</div>
+		</div>
+		<script src="js/base.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
